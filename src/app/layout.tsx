@@ -8,6 +8,12 @@ import { headers } from "next/headers";
 import Navbar from "~/components/nav/navbar";
 import { Toaster } from "~/components/ui/sonner";
 
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
 export const metadata = {
   title: "Peersafe",
   description: "A decentralized, encrypted file storage service",
@@ -21,9 +27,13 @@ export default function RootLayout({
 }) {
   const cookie = headers().get("cookie");
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="flex flex-col">
-        <ThemeProvider attribute="class">
+    <html
+      lang="en"
+      className={`${GeistSans.variable}`}
+      suppressHydrationWarning
+    >
+      <body>
+        <ThemeProvider attribute="class" disableTransitionOnChange>
           <Providers cookie={cookie}>
             <Toaster />
             <Navbar />

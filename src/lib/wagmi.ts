@@ -8,7 +8,7 @@ import { webSocket, createConfig, createStorage, cookieStorage } from "wagmi";
 import { polygonAmoy } from "wagmi/chains";
 
 const name = "Peersafe";
-const iconUrl = "/logo192.png";
+const iconUrl = "/logo192.png"; // change this
 
 let clientId = process.env.NEXT_PUBLIC_WEB3_AUTH_CLIENT_ID!;
 

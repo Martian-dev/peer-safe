@@ -128,12 +128,12 @@ const Illustration = () => {
     };
   }, [svgRef]);
   return (
-    <div className="absolute bottom-4 left-0 right-0 top-4 z-[10] flex items-center justify-center max-sm:-top-8 max-sm:bottom-8 sm:justify-end">
+    <div className="absolute bottom-4 left-0 right-0 top-4 flex items-center justify-center max-sm:-top-8 max-sm:bottom-8 sm:justify-end">
       <svg
         viewBox="-5 -5 866 1100"
         id="SVGRoot"
         color="#101010"
-        fontFamily="JetBrains Mono"
+        fontFamily="var(--font-jetbrains-mono)"
         fontSize="18px"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         xmlns="http://www.w3.org/2000/svg"
@@ -257,7 +257,7 @@ const Illustration = () => {
               fontVariationSettings: "normal",
               stopColor: "#000",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -266,7 +266,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientBottomRight)",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -281,7 +281,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientBottomRight2)",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -290,7 +290,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -298,7 +298,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -307,7 +307,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -316,7 +316,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -324,7 +324,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -333,7 +333,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 1,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -342,7 +342,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientTopLeft2)",
               strokeWidth: 1,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -351,7 +351,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientBottomLeft)",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -360,7 +360,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientBottomLeft2)",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -369,7 +369,7 @@ const Illustration = () => {
             style={{
               fill: "url(#linearGradientTopLeft)",
               strokeWidth: 1,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -380,7 +380,7 @@ const Illustration = () => {
               fontVariationSettings: "normal",
               stopColor: "#000",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -398,7 +398,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -406,7 +406,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -424,7 +424,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -442,7 +442,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -451,7 +451,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -460,7 +460,7 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <path
@@ -469,24 +469,24 @@ const Illustration = () => {
             style={{
               fill: "none",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
-          <circle r="5" fill="#2d2d2dff" id="data-encryption">
+          <circle r="5" fill="#2d4d2d00" id="data-encryption">
             <animateMotion
               dur="40s"
               calcMode="linear"
               repeatCount="indefinite"
-              keyPoints="0;1;1"
-              keyTimes="0;0.2;1"
+              keyPoints="0;0;1;1"
+              keyTimes="0;0;0.2;1"
               path="m328.444 98.299 58.58-33.8a13.87 13.87 180 0 1 13.86 0l425 245.2a4.616 4.616 90 0 1 0 7.996l-130.3 75.15a4.607 4.607 89.95 0 0 .006 7.985l6.21 3.57"
             />
             <animate
               attributeName="fill"
               repeatCount="indefinite"
               dur="40s"
-              values="#2d2d2d; #2d2d2d; #2d2d2d00; #2d2d2d00"
-              keyTimes="0; 0.2; 0.2; 1"
+              values="#2d4d2d00; #2d4d2d00; #2d4d2dff; #2d4d2dff; #2d4d2d00; #2d4d2d00"
+              keyTimes="0; 0; 0; 0.2; 0.2; 1"
             />
           </circle>
           <circle r="5" fill="#2d4d2d00" id="encryption-storage">
@@ -519,11 +519,11 @@ const Illustration = () => {
               attributeName="fill"
               repeatCount="indefinite"
               dur="40s"
-              values="#2d4d2d00; #2d4d2d00; #2d4d2d; #2d4d2d; #2d4d2d00; #2d4d2d00"
+              values="#2d4d2d00; #2d4d2d00; #2d4d2dff; #2d4d2dff; #2d4d2d00; #2d4d2d00"
               keyTimes="0; 0.5; 0.5; 0.7; 0.7; 1"
             />
           </circle>
-          <circle r="5" fill="#2d2d2d00" id="decryption-data">
+          <circle r="5" fill="hsl(var(--muted))00" id="decryption-data">
             <animateMotion
               dur="40s"
               calcMode="linear"
@@ -536,7 +536,7 @@ const Illustration = () => {
               attributeName="fill"
               repeatCount="indefinite"
               dur="40s"
-              values="#2d2d2d00; #2d2d2d00; #2d2d2d; #2d2d2d; #2d2d2d00; #2d2d2d00"
+              values="#2d4d2d00; #2d4d2d00; #2d4d2dff; #2d4d2dff; #2d4d2d00; #2d4d2d00"
               keyTimes="0; 0.75; 0.75; 0.95; 0.95; 1"
             />
           </circle>
@@ -568,16 +568,16 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           >
-            <animate
+            {/* <animate
               attributeName="stroke"
               repeatCount="indefinite"
               dur="40s"
-              values="#2d2d2d; #2d2d2d; #189d9daa; #2d2d2d; #2d2d2d"
+              values="hsl(var(--muted)); hsl(var(--muted)); #189d9daa; hsl(var(--muted)); hsl(var(--muted))"
               keyTimes="0; 0.45; 0.465; 0.49; 1"
-            />
+            /> */}
           </path>
           <text
             id="storageText"
@@ -593,7 +593,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <text
@@ -610,7 +610,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <text
@@ -627,7 +627,7 @@ const Illustration = () => {
             style={{
               fill: "hsl(var(--background))",
               strokeWidth: 2.001,
-              stroke: "#2d2d2d",
+              stroke: "hsl(var(--muted))",
             }}
           />
           <text id="dataText" x={263.187} y={291.388} transform="skewY(-30)">

@@ -2,6 +2,7 @@
 
 import { useAccount, useDisconnect, useConnect } from "wagmi";
 import { Button } from "~/components/ui/button";
+import { Spinner } from "../ui/spinner";
 
 export default function Auth() {
   const { isConnected } = useAccount();
@@ -19,15 +20,20 @@ export default function Auth() {
 }
 
 const SignIn = () => {
-  const { connect, connectors, isPending } = useConnect();
+  const { connect, connectors } = useConnect();
+  const { isConnecting, isReconnecting } = useAccount();
   return (
     <Button
       onClick={() => {
         connect({ connector: connectors[0]! });
       }}
-      disabled={isPending}
+      disabled={isConnecting}
+      className="flex gap-2"
     >
-      Login
+      {isConnecting ? "" : "Login"}
+      {isConnecting ? (
+        <Spinner color="hsl(var(--muted))" className="h-5 w-5" />
+      ) : null}
     </Button>
   );
 };

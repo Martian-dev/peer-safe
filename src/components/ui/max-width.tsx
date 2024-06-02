@@ -9,7 +9,12 @@ const MaxWidth = ({
   children?: ReactNode;
 }) => {
   return (
-    <div className={cn("mx-auto flex w-full max-w-screen-xl px-4", className)}>
+    <div
+      className={cn(
+        "mx-auto flex w-full max-w-screen-xl flex-col px-4",
+        className,
+      )}
+    >
       {children}
     </div>
   );
