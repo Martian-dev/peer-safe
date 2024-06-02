@@ -1,0 +1,18 @@
+import { cn } from "~/lib/utils";
+import { ReactNode } from "react";
+
+const MaxWidth = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children?: ReactNode;
+}) => {
+  return (
+    <div className={cn("mx-auto flex w-full max-w-screen-xl px-4", className)}>
+      {children}
+    </div>
+  );
+};
+
+export default MaxWidth;
