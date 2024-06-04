@@ -21,7 +21,7 @@ export default function Auth() {
 
 const SignIn = () => {
   const { connect, connectors } = useConnect();
-  const { isConnecting, isReconnecting } = useAccount();
+  const { isConnecting } = useAccount();
   return (
     <Button
       onClick={() => {

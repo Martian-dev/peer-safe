@@ -1,18 +1,11 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
-import { JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Providers from "~/components/Providers";
 import { headers } from "next/headers";
 import Navbar from "~/components/nav/navbar";
 import { Toaster } from "~/components/ui/sonner";
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: "swap",
-});
 
 export const metadata = {
   title: "Peersafe",

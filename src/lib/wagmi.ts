@@ -3,14 +3,14 @@ import { Web3AuthNoModal } from "@web3auth/no-modal";
 import { EthereumPrivateKeyProvider } from "@web3auth/ethereum-provider";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 import { CHAIN_NAMESPACES, UX_MODE, WEB3AUTH_NETWORK } from "@web3auth/base";
-import { Chain } from "wagmi/chains";
+import { type Chain } from "wagmi/chains";
 import { webSocket, createConfig, createStorage, cookieStorage } from "wagmi";
 import { polygonAmoy } from "wagmi/chains";
 
 const name = "Peersafe";
 const iconUrl = "/logo192.png"; // change this
 
-let clientId = process.env.NEXT_PUBLIC_WEB3_AUTH_CLIENT_ID!;
+const clientId = process.env.NEXT_PUBLIC_WEB3_AUTH_CLIENT_ID!;
 
 function Web3AuthConnectorInstance(chains: Chain[]) {
   if (!chains[0]) throw new Error("No chain provided");
@@ -22,7 +22,7 @@ function Web3AuthConnectorInstance(chains: Chain[]) {
     displayName: chains[0].name,
     tickerName: chains[0].nativeCurrency?.name,
     ticker: chains[0].nativeCurrency?.symbol,
-    blockExplorerUrl: chains[0].blockExplorers?.default.url[0] as string,
+    blockExplorerUrl: chains[0].blockExplorers?.default.url[0],
   };
   const privateKeyProvider = new EthereumPrivateKeyProvider({
     config: { chainConfig },

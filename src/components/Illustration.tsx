@@ -91,7 +91,7 @@ const Illustration = () => {
       if (decryptionTimeout) clearTimeout(decryptionTimeout);
       const _styles = Array.from(decryptionStyles);
       const svgTime =
-        ((svgRef.current?.getCurrentTime() || 28.2) * 1000) % 40000;
+        ((svgRef.current?.getCurrentTime() ?? 28.2) * 1000) % 40000;
       const _changeIt = () => {
         const newStr = _styles.pop();
         if (!newStr) return;
@@ -137,7 +137,7 @@ const Illustration = () => {
       }
     };
   }, [svgRef]);
-  
+
   return (
     <div className="absolute bottom-4 left-0 right-0 top-4 flex items-center justify-center max-sm:-top-8 max-sm:bottom-8 sm:justify-end">
       <svg
