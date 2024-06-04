@@ -1,6 +1,8 @@
 // brainrot, don't read - krymzin
 "use client";
+
 import { useEffect, useRef, useState } from "react";
+
 const encryptionStyles = [
   "encryption",
   "encryptiow",
@@ -23,6 +25,7 @@ const encryptionStyles = [
   "ejojqdmeza",
   "vbhetloaqj",
 ];
+
 const decryptionStyles = [
   "decryption",
   "decryptiod",
@@ -51,25 +54,32 @@ const Illustration = () => {
   const [decryption, setDecryption] = useState("decryption");
   const [encryptionTimeout, setEncryptionTimeout] = useState<NodeJS.Timeout>();
   const [decryptionTimeout, setDecryptionTimeout] = useState<NodeJS.Timeout>();
+
   const svgRef = useRef<SVGSVGElement>(null);
+
   useEffect(() => {
     if (!svgRef.current) return;
     const changeEncryption = () => {
       if (encryptionTimeout) clearTimeout(encryptionTimeout);
-      let _styles = Array.from(encryptionStyles);
+
+      const _styles = Array.from(encryptionStyles);
+
       const svgTime =
-        ((svgRef.current?.getCurrentTime() || 8.2) * 1000) % 40000;
+        ((svgRef.current?.getCurrentTime() ?? 8.2) * 1000) % 40000;
+
       const _changeIt = () => {
         const newStr = _styles.pop();
         if (!newStr) return;
         setEncryption(newStr);
         setTimeout(_changeIt, 80);
       };
+      
       if (svgTime <= 8300 && svgTime >= 8100) {
         setTimeout(_changeIt, 80);
         setEncryptionTimeout(setTimeout(changeEncryption, 48200 - svgTime));
       } else {
         console.debug("svgAnimEncryption out of sync:", svgTime);
+        
         if (svgTime < 8100) {
           setEncryptionTimeout(setTimeout(changeEncryption, 8200 - svgTime));
         } else {
@@ -79,7 +89,7 @@ const Illustration = () => {
     };
     const changeDecryption = () => {
       if (decryptionTimeout) clearTimeout(decryptionTimeout);
-      let _styles = Array.from(decryptionStyles);
+      const _styles = Array.from(decryptionStyles);
       const svgTime =
         ((svgRef.current?.getCurrentTime() || 28.2) * 1000) % 40000;
       const _changeIt = () => {
@@ -127,6 +137,7 @@ const Illustration = () => {
       }
     };
   }, [svgRef]);
+  
   return (
     <div className="absolute bottom-4 left-0 right-0 top-4 flex items-center justify-center max-sm:-top-8 max-sm:bottom-8 sm:justify-end">
       <svg
