@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { JetBrains_Mono } from "next/font/google";
 
 const encryptionStyles = [
   "encryption",
@@ -49,6 +50,12 @@ const decryptionStyles = [
   "gfkshnapmw",
 ];
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
+
 const Illustration = () => {
   const [encryption, setEncryption] = useState("encryption");
   const [decryption, setDecryption] = useState("decryption");
@@ -73,13 +80,13 @@ const Illustration = () => {
         setEncryption(newStr);
         setTimeout(_changeIt, 80);
       };
-      
+
       if (svgTime <= 8300 && svgTime >= 8100) {
         setTimeout(_changeIt, 80);
         setEncryptionTimeout(setTimeout(changeEncryption, 48200 - svgTime));
       } else {
         console.debug("svgAnimEncryption out of sync:", svgTime);
-        
+
         if (svgTime < 8100) {
           setEncryptionTimeout(setTimeout(changeEncryption, 8200 - svgTime));
         } else {
@@ -149,7 +156,7 @@ const Illustration = () => {
         xmlnsXlink="http://www.w3.org/1999/xlink"
         xmlns="http://www.w3.org/2000/svg"
         ref={svgRef}
-        className="fade-in-2 -z-10 aspect-[866/1100] h-full max-w-[calc(100vw-4rem)] max-lg:max-h-[36rem] max-md:max-h-[32rem]"
+        className={`fade-in-2 -z-10 aspect-[866/1100] h-full max-w-[calc(100vw-4rem)] max-lg:max-h-[36rem] max-md:max-h-[32rem] ${jetbrainsMono.variable}`}
       >
         <defs>
           <linearGradient id="Emerald">
