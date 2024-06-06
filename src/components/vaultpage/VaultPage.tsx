@@ -4,6 +4,7 @@ import { useMutation } from "@tanstack/react-query";
 import { serverAction } from "~/server/actions";
 import { Button } from "../ui/button";
 import { useAccount } from "wagmi";
+import { redirect } from "next/navigation";
 
 export const dynamic = "force-dynamic";
 
@@ -13,7 +14,7 @@ export default function VaultPage() {
   });
   const { isConnected } = useAccount()
 
-  if (!isConnected) return <div className="text-center">please login above</div>;
+  if (!isConnected) return redirect("/");
 
   return (
     <div className="flex items-center justify-center gap-4 py-8">
